@@ -11,7 +11,7 @@ const updateImage = () => {
   construct.url = construct.url.split('/').join('{{s}}')
   construct.color = construct.color.replace('#', '{{h}}')
 
-  const url = `/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.image}/${construct.color}/data.png`;
+  const url = `https://og-image.jackcrane.rocks/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.image}/${construct.color}/data.png`;
   document.querySelector('#mainpreview').src = url;
   document.querySelector('#previewcode').innerText = url;
 }
