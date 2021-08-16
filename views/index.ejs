@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <h1>Opengraph image as a service</h1>
+  <main>
+    <div class="preview">
+      <div>
+        <h2>Preview</h2>
+        <img class="main" src="/og/title/subtitle/jackcrane.rocks/https/candybar/black/data.png" id="mainpreview" alt="">
+        <code id="previewcode">
+          /og/title/subtitle/jackcrane.rocks/https/candybar/black/data.png
+        </code>
+        <p>Use the above URL in your og:image meta tag.</p>
+        <p>This project costs me roughly $10 a month to operate. Although not required, donations are gratefully accepted:</p>
+        <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jackcrane" data-description="Support me on Buy me a coffee!" data-message="Feeling generous?" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script> -->
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jackcrane" data-color="#FFDD00" data-emoji="" data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+        <p>This project is hosted on DigitalOcean. Using this link, get started on DigitalOcean with a $100, 60-day credit for new users (and I get $25!).​</p>
+        <a href="https://www.digitalocean.com/?refcode=3eaf09c5d6c1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
+      </div>
+    </div>
+    <div class="options">
+      <h2>Options</h2>
+      <div class="imgsel fieldset">
+        <label>Select a background</label><br>
+        <img src="backgrounds/candy-bar.jpg" class="selectable active" data-eq="candybar">
+        <img src="backgrounds/cheerful-orange.jpg" class="selectable" data-eq="cheerfulorange">
+        <img src="backgrounds/renowned-red.jpg" class="selectable" data-eq="renownedred">
+        <img src="backgrounds/unmatched-eclipse.jpg" class="selectable" data-eq="unmatchedeclipse">
+        <img src="backgrounds/virtual-shapes.jpg" class="selectable" data-eq="virtualshapes">
+      </div>
+      <div class="fieldset">
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Title" data-field="title" class="update">
+      </div>
+      <div class="fieldset">
+        <label for="title">Subtitle</label>
+        <input type="text" id="subtitle" placeholder="Subtitle" data-field="subtitle" class="update">
+      </div>
+      <div class="fieldset">
+        <label for="title">URL</label>
+        <select name="" id="" class="url_protocol">
+          <option value="https">https://</option>
+          <option value="http">http://</option>
+          <option value="file">file://</option>
+          <option value=" ">no protocol</option>
+        </select>
+        <input type="text" id="url" placeholder="url" data-field="url" class="url update">
+      </div>
+      <div class="fieldset">
+        <label>Border and text Color</label>
+        <input type="color" class="update_change" data-field="color">
+      </div>
+    </div>
+  </main>
+</body>
+</html>

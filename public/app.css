@@ -1,0 +1,72 @@
+body {
+  background: #f4f7fb;
+  font-family: sans-serif;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+.preview img.main,
+.options img.main {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 7px 0px #000000;
+  box-shadow: 0px 0px 7px 0px #000000;
+}
+.preview code,
+.options code {
+  background: lightgrey;
+  width: calc(100% - 20px);
+  margin-top: 10px;
+  padding: 10px;
+  display: block;
+}
+.preview input[type=text],
+.options input[type=text] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #1c5eff;
+  border-radius: 5px;
+  background: #f4f7fb;
+  font-size: 16px;
+}
+.preview img.selectable,
+.options img.selectable {
+  display: inline-block;
+  width: 150px;
+  cursor: pointer;
+}
+.preview img.selectable.active,
+.options img.selectable.active {
+  outline: 2px solid #1c5eff;
+}
+.preview .fieldset,
+.options .fieldset {
+  padding-top: 10px;
+}
+.preview .fieldset label,
+.options .fieldset label {
+  display: block;
+}
+.preview .url_protocol,
+.options .url_protocol {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #1c5eff;
+  width: 100%!important;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 850px) {
+  main {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+}
