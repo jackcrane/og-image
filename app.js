@@ -50,8 +50,10 @@ app.get('/og/:title/:subtitle/:url/:protocol/:font/:image/:color/data.png', (req
 
   let promises = [];
 
-  const width = 1200;
-  const height = 627;
+  // const width = 1200;
+  // const height = 627;
+  const width = 240;
+  const height = 240;
 
   const canvas = createCanvas(width, height);
   const context = canvas.getContext('2d');

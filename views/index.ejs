@@ -11,16 +11,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
   
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
   <meta property="og:title" content="Opengraph image generator" />
   <meta property="og:locale" content="en_US" />
   <meta name="description" content="A simple opengraph image generator" />
   <meta property="og:description" content="A simple opengraph image generator" />
-  <link rel="canonical" href="https://og-image.jackcrane.rocks" />
-  <meta property="og:url" content="https://og-image.jackcrane.rocks" />
+  <link rel="canonical" href="https://og-image.xyz" />
+  <meta property="og:url" content="https://og-image.xyz" />
   <meta property="og:site_name" content="Opengraph image generator" />
-  <meta property="og:image" content="https://og-image.jackcrane.rocks/og/OG Image generator/Free, simple, fast/og-image.jackcrane.rocks/https/menlo/renownedred/{{h}}ffffff/data.png" />
+  <meta property="og:image" content="https://og-image.xyz/og/OG Image generator/Free, simple, fast/og-image.xyz/https/menlo/renownedred/{{h}}ffffff/data.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:image" content="https://og-image.jackcrane.rocks/og/OG Image generator/Free, simple, fast/og-image.jackcrane.rocks/https/menlo/renownedred/{{h}}ffffff/data.png" />
+  <meta property="twitter:image" content="https://og-image.xyz/og/OG Image generator/Free, simple, fast/og-image.xyz/https/menlo/renownedred/{{h}}ffffff/data.png" />
   <meta property="twitter:title" content="Opengraph image generator" />
 </head>
 <body>
@@ -29,18 +32,68 @@
     <div class="preview">
       <div>
         <h2>Preview</h2>
-        <img class="main" src="https://og-image.jackcrane.rocks/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png" id="mainpreview" alt="">
+        <img class="main" src="https://og-image.xyz/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png" id="mainpreview" alt="">
         <code id="previewcode">
-          https://og-image.jackcrane.rocks/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png
+          https://og-image.xyz/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png
         </code>
-        <p>Use the above URL in your og:image meta tag.</p>
+        <p>Use the above URL in your og:image meta tag. You can also dynamically or manually generate these links using the following schema:</p>
+        <code>
+          https://og-image.xyz/og/:title/:subtitle/:url/:protocol/:font/:image/:color/data.png
+        </code>
+        <br>
+        <details>
+          <summary>Details</summary>
+          <table>
+            <tr>
+              <th>Parameter</th>
+              <th>Notes</th>
+              <th>Options</th>
+            </tr>
+            <tr>
+              <td>:title</td>
+              <td>The title, largest text in the image. You can use "{{n}}" for a newline</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>:subtitle</td>
+              <td>The subtitle, under the largest text. You can use "{{n}}" for a newline</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>:url</td>
+              <td>The url you want to show at the bottom. This should be without the protocol (http://). You cannot use slashes here, but you CAN use "{{s}}"</td>
+              <td>og-image.xyz, jackcrane.rocks</td>
+            </tr>
+            <tr>
+              <td>:protocol</td>
+              <td>The protocol of the aformentioned URL. Should not include "://"</td>
+              <td>http, https, file</td>
+            </tr>
+            <tr>
+              <td>:font</td>
+              <td>The font you want used in the image. You must use one of the fonts we support (supported fonts in examples)</td>
+              <td>menlo, atkinson</td>
+            </tr>
+            <tr>
+              <td>:image</td>
+              <td>The image you want to be used as the background. You must use one of the images we support (supported images in examples)</td>
+              <td>candybar, cheerfulorange, renownedred, unmatchedeclipse, virtualshapes, flawlessaffinity, prettyheroic, irritablehero, circleacquired, descendsun, shatteredfeelings</td>
+            </tr>
+            <tr>
+              <td>:color</td>
+              <td>The hex code of the color you want as the foreground. You cannot use the pound (#) symbol, so use {{h}} instead.</td>
+              <td>{{h}}FF6600</td>
+            </tr>
+          </table>
+        </details>
         <p>This project costs me roughly $10 a month to operate. Although not required, donations are gratefully accepted:</p>
         <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jackcrane" data-description="Support me on Buy me a coffee!" data-message="Feeling generous?" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
         <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jackcrane" data-color="#FFDD00" data-emoji="" data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
         <p>This project is hosted on DigitalOcean. Using this link, get started on DigitalOcean with a $100, 60-day credit for new users (and I get $25!).​</p>
         <a href="https://www.digitalocean.com/?refcode=3eaf09c5d6c1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
         <br>
-        <a href="https://og-image.vercel.app/">Inspired by Vercel's similar app.</a>
+        <a href="https://og-image.vercel.app/">Inspired by Vercel's similar app.</a><br>
+        <a href="mailto:jack@jackcrane.rocks">Need help? Email me!</a>
       </div>
     </div>
     <div class="options">

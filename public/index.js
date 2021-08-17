@@ -11,7 +11,7 @@ const updateImage = () => {
   construct.url = construct.url.split('/').join('{{s}}')
   construct.color = construct.color.replace('#', '{{h}}')
 
-  const url = `https://og-image.jackcrane.rocks/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.font}/${construct.image}/${construct.color}/data.png`;
+  const url = `https://og-image.xyz/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.font}/${construct.image}/${construct.color}/data.png`;
   document.querySelector('#mainpreview').src = url;
   document.querySelector('#previewcode').innerText = url;
 }
@@ -19,7 +19,7 @@ const updateImage = () => {
 let construct = {
   title:'title',
   subtitle:'subtitle',
-  url:'og-image.jackcrane.rocks',
+  url:'og-image.xyz',
   protocol:'https',
   font:'menlo',
   image:'candybar',

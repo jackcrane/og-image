@@ -65,6 +65,16 @@ main {
   border-radius: 5px;
   margin-bottom: 5px;
 }
+.preview table,
+.options table {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+.preview table td,
+.options table td {
+  border: 1px solid black;
+  padding: 3px;
+}
 @media screen and (max-width: 850px) {
   main {
     display: grid;
