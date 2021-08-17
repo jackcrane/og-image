@@ -1,6 +1,6 @@
 body {
   background: #f4f7fb;
-  font-family: sans-serif;
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
 }
 main {
   display: grid;
@@ -22,6 +22,10 @@ main {
   margin-top: 10px;
   padding: 10px;
   display: block;
+}
+.preview input,
+.options input {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 .preview input[type=text],
 .options input[type=text] {
@@ -52,8 +56,8 @@ main {
 .options .fieldset label {
   display: block;
 }
-.preview .url_protocol,
-.options .url_protocol {
+.preview select,
+.options select {
   display: inline-block;
   padding: 10px;
   border: 2px solid #1c5eff;

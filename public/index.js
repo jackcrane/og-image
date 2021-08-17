@@ -11,7 +11,7 @@ const updateImage = () => {
   construct.url = construct.url.split('/').join('{{s}}')
   construct.color = construct.color.replace('#', '{{h}}')
 
-  const url = `https://og-image.jackcrane.rocks/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.image}/${construct.color}/data.png`;
+  const url = `https://og-image.jackcrane.rocks/og/${construct.title}/${construct.subtitle}/${construct.url}/${construct.protocol}/${construct.font}/${construct.image}/${construct.color}/data.png`;
   document.querySelector('#mainpreview').src = url;
   document.querySelector('#previewcode').innerText = url;
 }
@@ -19,8 +19,9 @@ const updateImage = () => {
 let construct = {
   title:'title',
   subtitle:'subtitle',
-  url:'jackcrane.rocks',
+  url:'og-image.jackcrane.rocks',
   protocol:'https',
+  font:'menlo',
   image:'candybar',
   color:'black'
 }
@@ -54,3 +55,12 @@ document.querySelectorAll('select.url_protocol').forEach(e => {
     updateImage();
   })
 })
+
+document.querySelectorAll('select.font').forEach(e => {
+  e.addEventListener('input', evt => {
+    construct.font = evt.target.value;
+    updateImage();
+  })
+})
+
+updateImage();

@@ -7,6 +7,9 @@
   <title>Opengraph image as a service.</title>
   <link rel="stylesheet" href="app.css">
   <script src="index.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
 </head>
 <body>
   <h1>Opengraph image as a service</h1>
@@ -14,13 +17,13 @@
     <div class="preview">
       <div>
         <h2>Preview</h2>
-        <img class="main" src="https://og-image.jackcrane.rocks/og/title/subtitle/jackcrane.rocks/https/candybar/black/data.png" id="mainpreview" alt="">
+        <img class="main" src="https://og-image.jackcrane.rocks/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png" id="mainpreview" alt="">
         <code id="previewcode">
-          /og/title/subtitle/jackcrane.rocks/https/candybar/black/data.png
+          https://og-image.jackcrane.rocks/og/title/subtitle/jackcrane.rocks/https/menlo/candybar/black/data.png
         </code>
         <p>Use the above URL in your og:image meta tag.</p>
         <p>This project costs me roughly $10 a month to operate. Although not required, donations are gratefully accepted:</p>
-        <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jackcrane" data-description="Support me on Buy me a coffee!" data-message="Feeling generous?" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script> -->
+        <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jackcrane" data-description="Support me on Buy me a coffee!" data-message="Feeling generous?" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
         <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="jackcrane" data-color="#FFDD00" data-emoji="" data-font="Lato" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
         <p>This project is hosted on DigitalOcean. Using this link, get started on DigitalOcean with a $100, 60-day credit for new users (and I get $25!).​</p>
         <a href="https://www.digitalocean.com/?refcode=3eaf09c5d6c1&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
@@ -37,6 +40,12 @@
         <img src="backgrounds/renowned-red.jpg" class="selectable" data-eq="renownedred">
         <img src="backgrounds/unmatched-eclipse.jpg" class="selectable" data-eq="unmatchedeclipse">
         <img src="backgrounds/virtual-shapes.jpg" class="selectable" data-eq="virtualshapes">
+        <img src="backgrounds/flawless-affinity.jpg" class="selectable" data-eq="flawlessaffinity">
+        <img src="backgrounds/pretty-heroic.jpg" class="selectable" data-eq="prettyheroic">
+        <img src="backgrounds/irritable-hero.jpg" class="selectable" data-eq="irritablehero">
+        <img src="backgrounds/circle-acquired.jpg" class="selectable" data-eq="circleacquired">
+        <img src="backgrounds/descend-sun.jpg" class="selectable" data-eq="descendsun">
+        <img src="backgrounds/shattered-feelings.jpg" class="selectable" data-eq="shatteredfeelings">
       </div>
       <div class="fieldset">
         <label for="title">Title</label>
@@ -55,6 +64,13 @@
           <option value=" ">no protocol</option>
         </select>
         <input type="text" id="url" placeholder="url" data-field="url" class="url update">
+      </div>
+      <div class="fieldset">
+        <label for="title">Font</label>
+        <select name="" id="" class="font">
+          <option value="menlo">Menlo</option>
+          <option value="atkinson">Atkinson</option>
+        </select>
       </div>
       <div class="fieldset">
         <label>Border and text Color</label>
