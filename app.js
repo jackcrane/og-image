@@ -4,6 +4,32 @@ const port = 80;
 let ejs = require('ejs');
 const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
+const mysql = require('mysql');
+
+const toUnnamed = require('named-placeholders')();
+const originalQuery = require('mysql/lib/Connection').prototype.query;
+
+require('mysql/lib/Connection').prototype.query = function (...args) {
+    if (Array.isArray(args[0]) || !args[1]) {
+        return originalQuery.apply(this, args);
+    }
+
+    ([
+        args[0],
+        args[1]
+    ] = toUnnamed(args[0], args[1]));
+
+    return originalQuery.apply(this, args);
+};
+
+const connection = mysql.createConnection({
+  host: 'db.jackcrane.rocks',
+  user: 'apps',
+  password: 'Guro6297',
+  database: 'og-image'
+})
+
+connection.connect();
 
 registerFont('./public/fonts/Atkinson-Regular.ttf', { family: 'atkinson' })
 registerFont('./public/fonts/Menlo-Regular.ttf', { family: 'menlo' })
@@ -28,7 +54,19 @@ app.get('/og/:title/:subtitle/:url/:protocol/:font/:image/:color/data.png', (req
   if(req.params.protocol == ' ') { req.params.protocol = '' } else { req.params.protocol += '://' };
   if(req.params.image == ' ') req.params.title = 'candybar';
   if(req.params.color == ' ') req.params.color = 'black';
-  if(req.params.font == ' ') req.params.font = 'menlo-regular';
+  if(req.params.font == ' ') req.params.font = 'menlo';
+
+  connection.query(`INSERT INTO uses (title, subtitle, protocol, url, font, color, background) VALUES (:title, :subtitle, :protocol, :url, :font, :color, :background)`, {
+    title: req.params.title,
+    subtitle: req.params.subtitle,
+    protocol: req.params.protocol,
+    url: req.params.url,
+    font: req.params.font,
+    color: req.params.color,
+    background: req.params.background
+  }, (err, result, fields) => {
+    if(err) throw err;
+  })
 
   const img_map = {
     candybar:'./public/backgrounds/candy-bar.jpg',
