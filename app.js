@@ -23,9 +23,9 @@ require('mysql/lib/Connection').prototype.query = function (...args) {
 };
 
 const connection = mysql.createConnection({
-  host: 'db.jackcrane.rocks',
+  host: process.env.DB_HOST,
   user: 'apps',
-  password: 'Guro6297',
+  password: process.env.DB_PASS,
   database: 'og-image'
 })
 
