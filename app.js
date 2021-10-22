@@ -5,6 +5,7 @@ let ejs = require('ejs');
 const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const mysql = require('mysql');
+require('dotenv').config()
 
 const toUnnamed = require('named-placeholders')();
 const originalQuery = require('mysql/lib/Connection').prototype.query;
